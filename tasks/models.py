@@ -18,7 +18,7 @@ class Task(models.Model):
         return f'{self.name} due on {self.due_date}'
 
     def get_absolute_url(self):
-        return reverse('task_detail', args=[str(self.id)])
+        return reverse('task_detail', args=[str(self.pk)])
 
     class Meta:
         verbose_name = 'task'
